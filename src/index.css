@@ -5,9 +5,105 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.App>.img{
+  width: 1150px;
+  overflow: hidden;
+}
+
+.img img{
+  width: calc(100% + 2px);
+  height: 100%;
+  object-fit: cover;
+}
+
+.Controls{
+  width: 260px;
+  height: 180px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: calc(21% + 5px);
+}
+
+.buttons{
+  width: 160px;
+  height: 160px;
+  background-color: rgba(0, 255, 0, 0.363);
+  border-radius: 50%;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.center{
+  width: 60px;
+  height: 60px;
+  background-color: rgba(50, 205, 50, 0.479);
+  position: absolute;
+  border-radius: 50%;
+  color: transparent;
+  cursor: pointer;
+}
+
+.buttons button{
+  font-size: 0.9rem;
+  position: absolute;
+  color: transparent;
+  cursor: pointer;
+  background-color: rgba(0, 255, 0, 0.363);
+}
+
+button.menu{
+  left: 40%;
+  top: 9%;
+}
+
+button.prev{
+  left: 21%;
+  top: 44%;
+}
+
+button.next{
+  left: 68%;
+  top: 44%;
+}
+
+button.play{
+  left: 46%;
+  top: 78%;
+}
+
+
+/* Screeen  */
+
+.Screen{
+  background-color: white;
+  width: 230px;
+  height: 183px;
+  border-radius: 5px;
+  position: absolute;
+  top: 20%;
+}
+
+
+.selected{
+  background-color: green;
 }
