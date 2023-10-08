@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +9,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
   height: 100vh;
+}
+
+#root{
   overflow: hidden;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -17,6 +31,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .App>.img{
@@ -43,7 +58,7 @@ body {
 .buttons{
   width: 160px;
   height: 160px;
-  background-color: rgba(0, 255, 0, 0.363);
+  background-color: transparent;
   border-radius: 50%;
 }
 
@@ -56,19 +71,21 @@ button{
 .center{
   width: 60px;
   height: 60px;
-  background-color: rgba(50, 205, 50, 0.479);
+  background-color: transparent;
   position: absolute;
   border-radius: 50%;
   color: transparent;
   cursor: pointer;
 }
 
-.buttons button{
+/* buttons  */
+
+button{
   font-size: 0.9rem;
   position: absolute;
   color: transparent;
   cursor: pointer;
-  background-color: rgba(0, 255, 0, 0.363);
+  background-color: transparent;
 }
 
 button.menu{
@@ -95,15 +112,62 @@ button.play{
 /* Screeen  */
 
 .Screen{
-  background-color: white;
-  width: 230px;
-  height: 183px;
-  border-radius: 5px;
+  width: 240px;
+  height: 195px;
+  border-radius: 15px;
+  overflow: hidden;
   position: absolute;
-  top: 20%;
+  top: 19%;
+  background-color: black;
+}
+
+.Screen .wallpaper{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.Screen> h1{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
+/* Menu */
+.Menu{
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  height: 100%;
+  width: 120px;
+  padding: 0 10px;
+}
+
 .selected{
-  background-color: green;
+  background-color: rgb(92, 92, 230);
+  color: white;
+}
+
+.Menu> h2{
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+/* Menu items */
+.Menu li{
+  text-decoration: none;
+  list-style: none;
+  padding: 8px 4px;
+  position: relative;
+}
+
+.Menu li span{
+  font-weight: 800;
+  position: absolute;
+  right: 4%;
 }
